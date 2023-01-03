@@ -23,6 +23,8 @@ class FireBasePushNotificationService: FirebaseMessagingService() {
         super.onMessageReceived(message)
         val image = message.data["image"].toString()
         val text = message.data["text"].toString()
+        val notificationVisibility = message.data["notificationVisibility"].toString()
+
         val featuresAvailable_1 = message.data["featuresAvailable_1"].toString()
         val featuresAvailable_2 = message.data["featuresAvailable_2"].toString()
         val featuresAvailable_3 = message.data["featuresAvailable_3"].toString()
@@ -36,7 +38,10 @@ class FireBasePushNotificationService: FirebaseMessagingService() {
         sharedPreferencesObject.saveData("featuresAvailable_4",featuresAvailable_4)
         val url = URL(image)
         val  bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-        showNotification(bitmap,text)
+        if (notificationVisibility=="true"){
+            showNotification(bitmap,text)
+        }
+
     }
 
 

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity3">
+
+        <EditText
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Enter user name" />
+
+        <EditText
+            android:text="@string/image_link"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/imageLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Enter Image Link" />
+
+        <EditText
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/demoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Enter demo text" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/features1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Features 1    " />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/features2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Features 2     " />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/features3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Features 3     " />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/features4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Features 4     " />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/isShownNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Visibility "
+            android:checked="true"
+            />
+
+
+        <Button
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send" />
+
+    </LinearLayout>
+</layout>

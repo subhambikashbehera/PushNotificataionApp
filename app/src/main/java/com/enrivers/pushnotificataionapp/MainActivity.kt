@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
                     } else {
                         val sharedPreferanceManager = SharedPreferanceManager(this)
                         sharedPreferanceManager.saveData("login","true")
+                        sharedPreferanceManager.saveData("userName",userName)
                         startActivity(Intent(this, MainActivity2::class.java))
                         finish()
                     }
