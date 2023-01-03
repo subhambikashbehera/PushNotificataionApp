@@ -36,12 +36,12 @@ class FireBasePushNotificationService: FirebaseMessagingService() {
         sharedPreferencesObject.saveData("featuresAvailable_4",featuresAvailable_4)
         val url = URL(image)
         val  bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-        showNotification(bitmap)
+        showNotification(bitmap,text)
     }
 
 
     @RequiresApi(Build.VERSION_CODES.M)
-    private fun showNotification(bitmap: Bitmap) {
+    private fun showNotification(bitmap: Bitmap,title:String) {
         val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         val intent = Intent(this, MainActivity::class.java)
         val stackBuilder: TaskStackBuilder = TaskStackBuilder.create(this)
@@ -63,10 +63,10 @@ class FireBasePushNotificationService: FirebaseMessagingService() {
         }
         val builder = NotificationCompat.Builder(this, "CHANNEL_ID")
             .setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setContentTitle("My notification")
-            .setContentText("Much longer text that cannot fit one line...")
+            .setContentTitle("Test Notification")
+            .setContentText(title)
             .setStyle(NotificationCompat.BigTextStyle()
-                .bigText("Much longer text that cannot fit one line..."))
+                .bigText(title))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setLargeIcon(bitmap)
             .setStyle(NotificationCompat.BigPictureStyle().bigPicture(bitmap))
